@@ -49,9 +49,17 @@ const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
 const int led1 = 6, led2 = 7, led3 = 8, led4 = 9, led5 = 10;
+const int button = A6;
 
-int switchToChoice(int switchVal)
+// Variables
+// Which ship stat to view
+int statNum = 0;
+bool pressed = false;
+
+int switchToChoice()
 {
+  //Serial.write(switchVal);
+  int switchVal = analogRead(button);
   if(switchVal > 5 && switchVal < 11)
     return 5;
   else if(switchVal > 14 && switchVal < 21)
@@ -104,19 +112,23 @@ void setup() {
   pinMode(led5, OUTPUT);
   // set up the LCD's number of columns and rows:
   lcd.begin(16, 2);
-  // Print a message to the LCD.
-  lcd.print("Analog Value");
+  Serial.begin(9600);
+  // Start with stat screen
+  //shipStats();
 }
 
 void loop() {
-  int switchVal = analogRead(A6);
+  //int switchVal = analogRead(A6);
   // set the cursor to column 0, line 1
   // (note: line 1 is the second row, since counting begins with 0):
-  lcd.setCursor(0, 1);
-  if(switchVal == 0)
-    lcd.print("0   ");
-  else
-    lcd.print(switchVal);
-  int choice = switchToChoice(switchVal);
-  makeChoice(choice);
+  //lcd.setCursor(0, 1);
+  //if(switchVal == 0)
+  //  lcd.print("0   ");
+  //else
+  //  lcd.print(switchVal);
+  //int choice = switchToChoice();
+  //makeChoice(choice);
+  shipStats();
+  if(analogRead(button) == 0)
+    pressed = false;
 }
