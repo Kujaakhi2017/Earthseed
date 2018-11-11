@@ -1,5 +1,5 @@
 // Used to print the final results of the game.
-
+int endNum = 0;
 void showPlanetStats() {
     
 }
@@ -31,23 +31,23 @@ void endStats() {
     switch(switchToChoice())
     {
       case 1:
-        statNum--;
-        if(statNum < 0)
-          statNum = 12;
+        endNum--;
+        if(endNum < 3)
+          endNum = 12;
         pressed = true;
         break;
       case 2:
-        statNum++;
-        if(statNum > 12)
-          statNum = 0;
+        endNum++;
+        if(endNum > 12)
+          endNum = 0;
         pressed = true;
         break;
-      case 5:
-        // todo: call scan planet function
-        menuNum = 0;
+      case 3:
+        endNum = 0;
         pressed = true;
         break;
       default:
+        showScore();
         break;
     }
   }
