@@ -2,7 +2,6 @@
 //Declare stats for planet as global vairbales
 int planet_Atmosphere = 0, planet_Water = 0, planet_Temp = 0, planet_Gravity = 0, planet_Resources = 0, planet_Civilization = 0;
 int planNum=0;
-bool uranusProbed = false;
 int luck1=0, luck2=0, luck3=0, luck4=0, luck5=0;
 
 void generatePlanetStats()
@@ -11,7 +10,7 @@ void generatePlanetStats()
 
     //Update new planet stats
     planet_Atmosphere = rand() % 5;     //(0-4)
-    planet_Water = rand() % 5;          //(0-4)
+    planet_Water = rand() % 4;          //(0-3)
     planet_Temp = (rand() % 1501) - 500;   //(-500 to 1000) temp is in F 
     planet_Gravity = rand() % 5;        //(0-4)
     planet_Resources = rand() % 5;      //(0-4)
@@ -114,7 +113,7 @@ void planetScan()
       value = gravReading;
       break;
     case 4:
-      stat = "Res: ";
+      stat = "Resource: ";
       value = resReading;
       break;
     case 5:

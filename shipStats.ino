@@ -1,6 +1,6 @@
 // Variables
 int landing = 100, construction = 100, colonists = 1000, liveStock = 100;
-int supplies = 100, science = 100, culture = 100, probes = 10;
+int supplies = 100, science = 100, culture = 100;
 int tempScan = 100, atmosScan = 100, gravScan = 100, waterScan = 100, resScan = 100;
 // Which ship stat to view
 int statNum = 0;

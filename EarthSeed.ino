@@ -19,9 +19,10 @@ const int button = A6;
 // Variables
 bool pressed = false;
 int mainNum = 0;
-bool light1 = false, light2 = false, light3 = false, light4 = false, light5 = false;
 int menuNum = 0;
+bool uranusProbed = false;
 bool gameOver = false;
+int probes = 10;
 
 int switchToChoice()
 {
@@ -70,24 +71,14 @@ void loop() {
   //mainMenu();
   loadMenu();
   
-  digitalWrite(led1,LOW);
-  digitalWrite(led2,LOW);
-  digitalWrite(led3,LOW);
-  digitalWrite(led4,LOW);
-  digitalWrite(led5,LOW);
+  digitalWrite(led1, LOW);
+  digitalWrite(led2, LOW);
+  digitalWrite(led3, LOW);
+  digitalWrite(led4, LOW);
+  digitalWrite(led5, LOW);
   
   if(analogRead(button) == 0)
     pressed = false;
-  if(light1)
-    digitalWrite(led1, HIGH);
-  if(light2)
-    digitalWrite(led2, HIGH);
-  if(light3)
-    digitalWrite(led3, HIGH);
-  if(light4)
-    digitalWrite(led4, HIGH);
-  if(light5)
-    digitalWrite(led5, HIGH);
 }
 
 void mainMenu() {
@@ -155,12 +146,44 @@ void loadMenu()
     case 1:
       planetScan();
       break;
+    case 2:
+      probePlanet();
     case 3:
       shipStats();
+      break;
+    case 5:
+      randomEvent();
       break;
     default:
       if(!gameOver)
         mainMenu();
       break;
+  }
+}
+
+void probePlanet()
+{
+  if(probes > 0)
+  {
+    uranusProbed = true;
+    lcd.setCursor(0,0);
+    lcd.print("                ");
+    lcd.setCursor(0,0);
+    lcd.print("PROBE LAUNCHED");
+    lcd.setCursor(0,1);
+    lcd.print("                ");
+    delay(3000);
+    menuNum = 1;
+  }
+  else
+  {
+    lcd.setCursor(0,0);
+    lcd.print("                ");
+    lcd.setCursor(0,0);
+    lcd.print("NO MORE PROBES");
+    lcd.setCursor(0,1);
+    lcd.print("                ");
+    delay(3000);
+    menuNum = 1;
   }
 }
