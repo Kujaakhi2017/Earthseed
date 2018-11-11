@@ -31,3 +31,5 @@ Earthseed will have a case around it soon. I also think manipulating the lights 
 
 ![alt text](https://raw.githubusercontent.com/Kujaakhi2017/Earthseed/master/20181110_224759.jpg)
 
+
+![alt text](https://raw.githubusercontent.com/Kujaakhi2017/Earthseed/master/IMG_2620.jpg)
