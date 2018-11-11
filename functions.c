@@ -82,8 +82,10 @@ void endGame()
     else wetness = "dry";
 
     //Calculate fate of colonists upon landing
-    if(ship_Landing < 70)
+    if(ship_Landing < 70) {
         fateValue = rand() % 100;
+        ship_Colonists -= fateValue;
+    }
 
     ship_Colonists = ship_Colonists - fateValue;
 
@@ -106,12 +108,26 @@ void endGame()
     //to see if we can live on a planet we look at 
     //construction, resoucrses, landing
 
-//-------------
     //Print out the first paragraph
-    Serial.print("The Earthseed entered into the planet’s %s atmosphere", atmosphere);
-    Serial.print("and activated its landing gear as soon as it approached the planet’s %s surface.", wetness);
-    if(fateValue == 0)
-        
+    Serial.println("The Earthseed entered into the planet’s %s ", atmosphere);
+    Serial.println("atmosphere and activated its landing gear as "); 
+    Serial.print("soon as it approached the planet’s %s surface.", wetness);
+    if(fateValue == 0) {
+        Serial.println("Since the landing gear took very little damage, ");
+        Serial.println("the ship managed to safely land and avoid any losses.");
+    }
+    else {
+        Serial.println("Since the landing gear sustained great damage, ");
+        Serial.println("the ship was not able to land smoothly "); 
+        Serial.println("on the planet’s surface and %d colonists end up dying.", fateValue);
+        Serial.println("Thankfully, engineers from the colony managed to patch ");
+        Serial.println("up the damage and keep the ship afloat.");
+    }
+    if(melt) {
+        Serial.println("Upon landing, the ship starts melting under the high");
+        Serial.println("temperatures and kills everyone in the Earthseed.");
+        Serial.println("Thanks for making humans extinct. ");
+    }
 
     //Calculate the variables
     //Consider the variables
