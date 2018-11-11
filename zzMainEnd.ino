@@ -26,28 +26,32 @@ void showScore(int colonists, int scientific, int cultural, int resources, int c
 }
 
 void endStats() {
+  String output = "";
+  // choose what to display.
+  switch(endNum) {
+          
+  }
+    
   if(!pressed)
   {
     switch(switchToChoice())
     {
       case 1:
         endNum--;
-        if(endNum < 3)
-          endNum = 12;
+        if(endNum < 0)
+          endNum = 3;
         pressed = true;
         break;
       case 2:
         endNum++;
-        if(endNum > 12)
+        if(endNum > 3)
           endNum = 0;
         pressed = true;
         break;
       case 3:
-        endNum = 0;
         pressed = true;
         break;
       default:
-        showScore();
         break;
     }
   }
