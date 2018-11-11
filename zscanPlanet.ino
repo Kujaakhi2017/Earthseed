@@ -6,6 +6,7 @@ int luck1=0, luck2=0, luck3=0, luck4=0, luck5=0;
 
 void generatePlanetStats()
 {
+  analogRead(A7);
   srand(analogRead(A7));
 
     //Update new planet stats

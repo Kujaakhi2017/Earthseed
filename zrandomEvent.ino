@@ -4,6 +4,7 @@ void randomEvent()
     int instance =0;
     int store =0;
     
+    analogRead(A7);
     srand(analogRead(A7));
     instance = rand() % 100;
     String output = "";
@@ -26,7 +27,7 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "+" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
@@ -41,26 +42,11 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "+" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
-            case 3:
-                    store = (rand() % (25 - 6)) + 5;
-                    liveStock -= store;
-                    //digitalWrite(led3, HIGH);
-                    lcd.setCursor(0,0);
-                    lcd.print("                ");
-                    lcd.setCursor(0,0);
-                    lcd.print("LIVE STOCK HIT");
-                    lcd.setCursor(0,1);
-                    lcd.print("                ");
-                    lcd.setCursor(0,1);
-                    output = "-" + store;
-                    lcd.print(output);
-                    delay(3000);
-                    break;
-            case 4:
+            case 2:
                     store = (rand() % (35 - 16)) + 15;
                     supplies += store;
                     //digitalWrite(led3, HIGH);
@@ -71,11 +57,11 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "+" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
-            case 5:
+            case 3:
                     store = (rand() % (35 - 16)) + 15;
                     science += store;
                     lcd.setCursor(0,0);
@@ -85,11 +71,11 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "+" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
-            case 6:
+            case 4:
                     store = (rand() % (35 - 16)) + 15;
                     culture += store;
                     lcd.setCursor(0,0);
@@ -99,11 +85,11 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "+" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
-            case 7:
+            case 5:
                     probes += 1;
                     lcd.setCursor(0,0);
                     lcd.print("                ");
@@ -115,7 +101,7 @@ void randomEvent()
                     lcd.print("+1");
                     delay(3000);
                     break;
-            case 8:
+            case 6:
                     store = (rand() % (35 - 16)) + 15;
                     tempScan += store;
                     //digitalWrite(led4, HIGH);
@@ -126,11 +112,11 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "+" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
-            case 9:
+            case 7:
                     store = (rand() % (35 - 16)) + 15;
                     atmosScan += store;
                     //digitalWrite(led4, HIGH);
@@ -141,11 +127,11 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "+" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
-            case 10:
+            case 8:
                     store = (rand() % (35 - 16)) + 15;
                     gravScan += store;
                     //digitalWrite(led4, HIGH);
@@ -156,11 +142,11 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "+" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
-            case 11:
+            case 9:
                     store = (rand() % (35 - 16)) + 15;
                     waterScan = store;
                     //digitalWrite(led4, HIGH);
@@ -171,11 +157,11 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "+" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
-            case 12:
+            case 10:
                     store = (rand() % (35 - 16)) + 15;
                     resScan += store;
                     //digitalWrite(led4, HIGH);
@@ -186,7 +172,7 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "+" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
@@ -214,7 +200,7 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "-" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
@@ -229,7 +215,7 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "-" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
@@ -244,7 +230,7 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "-" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
@@ -259,7 +245,7 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "-" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
@@ -274,7 +260,7 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "-" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
@@ -289,7 +275,7 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "-" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
@@ -304,7 +290,7 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "-" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
@@ -331,7 +317,7 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "-" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
@@ -346,7 +332,7 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "-" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
@@ -361,7 +347,7 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "-" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
@@ -376,7 +362,7 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "-" + store;
                     lcd.print(output);
                     delay(3000);
                     break;
@@ -391,7 +377,7 @@ void randomEvent()
                     lcd.setCursor(0,1);
                     lcd.print("                ");
                     lcd.setCursor(0,1);
-                    output = "-" + store;
+                    output += "-" + store;
                     lcd.print(output);
                     delay(3000);
                     break;

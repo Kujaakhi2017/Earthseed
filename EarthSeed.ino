@@ -151,6 +151,9 @@ void loadMenu()
     case 3:
       shipStats();
       break;
+    case 4:
+      endGame();
+      break;
     case 5:
       randomEvent();
       break;
@@ -166,6 +169,7 @@ void probePlanet()
   if(probes > 0)
   {
     uranusProbed = true;
+    probes--;
     lcd.setCursor(0,0);
     lcd.print("                ");
     lcd.setCursor(0,0);
