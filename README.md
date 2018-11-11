@@ -27,7 +27,7 @@ We learned the that breadboards and people can be very unreliable, but beautiful
 Earthseed will have a case around it soon. I also think manipulating the lights when crazy random events come would be cool too. If a space ghost came to interact with the user, we could introduce this event but flickering all of the LED lights in a spooky fashion before the LCD screen starts talking about the event.
 
 # Images
-![alt text](https://raw.githubusercontent.com/Kujaakhi2017/Earthseed/master/path/to/20181110_192421.jpg)
+![alt text](https://raw.githubusercontent.com/Kujaakhi2017/Earthseed/master/20181110_192421.jpg)
 
-![alt text](https://raw.githubusercontent.com/Kujaakhi2017/Earthseed/master/path/to/20181110_224759.jpg)
+![alt text](https://raw.githubusercontent.com/Kujaakhi2017/Earthseed/master/20181110_224759.jpg)
 
