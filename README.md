@@ -1,5 +1,5 @@
 # Earthseed
-An arduino game
+A sci-fi arduino game.
 
 # Inspiration
 Gilbert was inspired by the game Seedship and his love for hardware technology. He had been planning this project for a few days and was not even sure if he would work on Earthseed until the first day of Hack Princeton. Try the original game: http://philome.la/johnayliff/seedship/play
